@@ -17,16 +17,16 @@ public class AndroidDriverManager {
 		capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("app", System.getProperty("user.dir") + "/src/main/java/flutter_app/app-debug.apk");
 		capabilities.setCapability("automationName", "Flutter");
-		this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), capabilities);
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), capabilities);
 
-		this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 
 	public AndroidDriver get() {
-		return this.driver;
+		return driver;
 	}
 
 	public void quitDriver() {
-		this.driver.quit();
+		driver.quit();
 	}
 }

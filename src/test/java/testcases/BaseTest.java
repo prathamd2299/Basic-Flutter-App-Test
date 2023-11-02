@@ -13,12 +13,12 @@ public class BaseTest {
 
 	@BeforeClass(alwaysRun = true)
 	public void setup() throws MalformedURLException {
-		this.driverManager = new AndroidDriverManager();
-		this.driverManager.createFlutterDriver();
+		driverManager = new AndroidDriverManager();
+		driverManager.createFlutterDriver();
 	}
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
-		this.driverManager.quitDriver();
+		driverManager.quitDriver();
 	}
 }

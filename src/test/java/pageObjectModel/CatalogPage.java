@@ -7,10 +7,10 @@ public class CatalogPage {
 	private final FlutterFinder finder;
 
 	public CatalogPage(final AndroidDriver driver) {
-		this.finder = new FlutterFinder(driver);
+		finder = new FlutterFinder(driver);
 	}
 
 	public String pageTitle() {
-		return this.finder.byText("Catalog").getText();
+		return finder.byText("Catalog").getText();
 	}
 }
